@@ -9,7 +9,7 @@ import React from 'react'
 const App = () => {
 	return (
 		<div>
-			<h1>Hello world 1</h1>
+			<Header />
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repellat impedit natus, modi explicabo ullam ratione repudiandae placeat ipsum aspernatur reprehenderit aut accusantium ad eligendi excepturi facere quas deserunt quae!
 			</p>
@@ -19,6 +19,12 @@ const App = () => {
 		</div>
 	)
 	
+}
+
+const Header = () => {
+	return (
+		<h1>Hello World</h1>
+	)
 }
 
 export default App
