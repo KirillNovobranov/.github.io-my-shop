@@ -1,4 +1,7 @@
 import React from 'react'
+import './cart.css'
+import './menu.css'
+import './header.css'
 
 const Header = () => {
     return (
