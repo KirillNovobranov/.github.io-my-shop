@@ -1,5 +1,11 @@
 import React from 'react'
 
+import './base.css'
+import './cart.css'
+import './header.css'
+import './menu.css'
+import './reset.css'
+
 // function App() {
 // 	return <h1>Hello world</h1>
 // }
