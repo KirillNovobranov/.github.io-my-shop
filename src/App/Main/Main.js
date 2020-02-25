@@ -1,5 +1,7 @@
 import React from 'react'
 
+import ProductsList from './Products/ProductsList'
+
 const Main = () => {
     return (
         <div>
@@ -10,7 +12,7 @@ const Main = () => {
 
                         </div>
                         <div className="col-lg-9">
-
+                            <ProductsList />
                         </div>
                     </div>
                 </div>
