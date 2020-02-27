@@ -8,12 +8,12 @@ const ProductListItem = ({
     type,
     capacity,
     price,
-    image,
+    image = "/images/no-image.png",
 }) => {
     return (
         <div className="product-list-item">
             <div className="product-img">
-               <img src={image} alt={description} title={name}/> 
+               <img src={image} alt={description} title={name} height="102px"/> 
             </div>
             <div className="product-title">{name}</div>
             <div className="product-description">{description}</div>
@@ -31,6 +31,7 @@ ProductListItem.propTypes = {
     type:PropTypes.string.isRequired,
     capacity:PropTypes.number.isRequired,
     price:PropTypes.number.isRequired,
+    image:PropTypes.string,
 }
 
 // ProductListItem.defaultProps = {
