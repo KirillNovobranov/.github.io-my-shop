@@ -21,7 +21,7 @@ const ProductListItem = ({
             <div className="product-features">Capacity: {capacity} Gb</div>
             <div className="product-quantity">
                 <button>-</button>
-                <input type="text" value="1"/>
+                <input type="text" value="1" readOnly/>
                 <button>+</button>
             </div>
             <div className="product-price">{price} $</div>
