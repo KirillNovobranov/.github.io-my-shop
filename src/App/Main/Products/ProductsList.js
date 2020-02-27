@@ -9,8 +9,8 @@ const ProductsList = () => {
             <h1 className="page-title"> Products List</h1>
             <div className="row">
                 {
-                    productsData.map((product) =>(
-                        <div className="col-lg-6">
+                    productsData.map((product, i) =>(
+                        <div className="col-lg-6" key={i}>
                             <ProductListItem 
                                 name={product.name}
                                 description={product.description}
