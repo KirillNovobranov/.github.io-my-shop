@@ -6,6 +6,7 @@ const productsData = [
         type:"phone",
         capacity:128,
         price:200,
+        image:"/images/iphone.png",
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ const productsData = [
         type:"phone",
         capacity:256,
         price:300,
+        image: "/images/ipad.png",
     },
     {
         id: 3,
@@ -22,6 +24,7 @@ const productsData = [
         type:"phone",
         capacity:64,
         price:500,
+        image: "/images/iphone.png",
     },
     {
         id: 4,
@@ -30,6 +33,7 @@ const productsData = [
         type:"phone",
         capacity:521,
         price:400,
+        image: "/images/ipad.png",
     }                       
 ]
 
