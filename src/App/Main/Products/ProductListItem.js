@@ -55,7 +55,6 @@ class ProductListItem extends Component {
                 </div>
                 <div className="product-price">{price} $</div>
                 <button 
-                onClick = 
                 className="btn-add-to-cart">Add to cart</button>
             </div>
         )
