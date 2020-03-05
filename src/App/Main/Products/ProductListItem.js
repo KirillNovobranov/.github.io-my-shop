@@ -30,7 +30,7 @@ class ProductListItem extends Component {
     // }
 
     // Вариант из класса
-        // changeColor () {
+    //  changeColor () {
     //     this.setState((prevState) => {
     //         if(prevState.color === "green") {
     //             return {
@@ -42,6 +42,13 @@ class ProductListItem extends Component {
     //             }
     //         }
     //     })
+    // }
+
+    // Вариант 2 из класса
+    // changeColor () {
+    //     this.setState((prevState) =>(
+    //         (prevState.color === "green") ? {color:"red"} : {color:"green"}
+    //     ))
     // }
 
     changeColor () {
