@@ -39,8 +39,8 @@ class ProductListItem extends Component {
                 <div className="product-img">
                     <img src={image} alt={description} title={name} height="102px" />
                 </div>
-                <p>Color: {this.state.color}</p>
-                <button>Change color</button>
+                {/* <p>Color: {this.state.color}</p> */}
+                {/* <button>Change color</button> */}
                 <div className="product-title">{name}</div>
                 <div className="product-description">{description}</div>
                 <div className="product-features">Type: {type}</div>
