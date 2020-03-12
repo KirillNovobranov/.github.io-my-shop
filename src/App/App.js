@@ -36,11 +36,11 @@ class App extends Component {
 
 	addProductToCart = (count, productId) => {
 		this.setState((prevState) => ({
-			productsInCart:Object.assign({}, prevState.productsInCart,
-			{
+			productsInCart:{
+				...prevState.productsInCart,
 				[productId]: (prevState.productsInCart[productId] || 0) + count
 			}
-			)
+			
 		})
 		)
 	}
