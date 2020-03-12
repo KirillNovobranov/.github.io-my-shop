@@ -17,21 +17,30 @@ class App extends Component {
 		}
 	}
 
+	// addProductToCart = (count, productId) => {
+    //     this.setState((prevState) => {
+	// 		if (prevState.productsInCart[productId] === undefined) {
+    //             return {
+	// 				productsInCart: {
+	// 					[productId]: 0 + count
+	// 				}
+	// 			}	
+	// 		} else {
+	// 			return {
+	// 				productsInCart: {
+	// 					[productId]: prevState.productsInCart[productId] + count
+	// 				}
+	// 		}	}
+	// 	})
+	// }
+
 	addProductToCart = (count, productId) => {
-        this.setState((prevState) => {
-			if (prevState.productsInCart[productId] === undefined) {
-                return {
-					productsInCart: {
-						[productId]: 0 + count
-					}
-				}	
-			} else {
-				return {
-					productsInCart: {
-						[productId]: prevState.productsInCart[productId] + count
-					}
-			}	}
+		this.setState((prevState) => ({
+			productsInCart:{
+				[productId]: (prevState.productsInCart[productId] || 0) + count
+			}
 		})
+		)
 	}
 
 	render() {
