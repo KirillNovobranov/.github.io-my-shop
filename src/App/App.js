@@ -13,26 +13,10 @@ class App extends Component {
 
 	state = {
 		productsInCart: {
-			
+			1:5,
+			2:5,
 		}
 	}
-
-	// addProductToCart = (count, productId) => {
-    //     this.setState((prevState) => {
-	// 		if (prevState.productsInCart[productId] === undefined) {
-    //             return {
-	// 				productsInCart: {
-	// 					[productId]: 0 + count
-	// 				}
-	// 			}	
-	// 		} else {
-	// 			return {
-	// 				productsInCart: {
-	// 					[productId]: prevState.productsInCart[productId] + count
-	// 				}
-	// 		}	}
-	// 	})
-	// }
 
 	addProductToCart = (count, productId) => {
 		this.setState((prevState) => ({
