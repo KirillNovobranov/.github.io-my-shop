@@ -5,7 +5,7 @@ const CartPage = ({
 }) => {
     return (
         <div>
-            <h1>CartPage</h1>
+            <h1 className="page-title">CartPage</h1>
         </div>
     )
 }
