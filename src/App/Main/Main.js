@@ -1,5 +1,5 @@
 import React from 'react'
-
+import CartPage from './CartPage/CartPage'
 import ProductsList from './Products/ProductsList'
 
 const Main = ({
