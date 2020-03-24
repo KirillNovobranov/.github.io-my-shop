@@ -6,6 +6,7 @@ import './../common/style/base.css'
 import Header from './Header/Header'
 import Main from './Main/Main'
 import Footer from './Footer/Footer'
+import CartTotal from '../Components/Cart/CartTotal'
 
 class App extends Component {
 
