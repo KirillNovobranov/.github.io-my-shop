@@ -1,3 +1,7 @@
+// import productsData from './../Products/productsData'
+
+import { array } from "prop-types"
+
 const productsData = [
     {
         id:1,
@@ -38,4 +42,11 @@ const productsData = [
     
 ]
 
- export default productsData
+export const getProductsMap = (array) => {
+    return array.reduce((accObj,product)=>({
+        ...accObj,
+        [product.id]:product,
+    }),{})
+}
+
+export default productsData
