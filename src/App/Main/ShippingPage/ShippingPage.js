@@ -1,11 +1,9 @@
 import React from 'react'
 
-
-const ShippingPage = ({
-}) => {
+const ShippingPage = () => {
     return (
         <div>
-            <h1 className="page-title">ShippingPage</h1>
+            <h1 className="page-title"> Shipping Page</h1>
         </div>
     )
 }

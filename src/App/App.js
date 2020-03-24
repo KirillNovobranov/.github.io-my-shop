@@ -1,9 +1,7 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 
-import React from 'react'
-
-import './../common/style/base.css'
 import './../common/style/reset.css'
+import './../common/style/base.css'
 
 import Header from './Header/Header'
 import Main from './Main/Main'
@@ -12,21 +10,22 @@ import Footer from './Footer/Footer'
 class App extends Component {
 
 	state = {
-		productsInCart: {
+		productsInCart:{
+			1:5,
+			2:5,
 		}
 	}
 
-	addProductToCart = (count, productId) => {
-		this.setState((prevState) => ({
+	addProductToCart = (count,productId) => {
+		this.setState((prevState)=>({
 			productsInCart:{
 				...prevState.productsInCart,
-				[productId]: (prevState.productsInCart[productId] || 0) + count
+				[productId]:(prevState.productsInCart[productId] || 0) + count
 			}
-			
-		})
-		)
+		}))
 	}
 
+	
 	render() {
 		return (
 			<div>
@@ -34,12 +33,17 @@ class App extends Component {
 					productsInCart={this.state.productsInCart}
 				/>
 				<Main 
-					addProductToCart = {this.addProductToCart}
+					addProductToCart={this.addProductToCart}
+					productsInCart={this.state.productsInCart}
 				/>
-				<Footer />
+				<Footer/>
+				
 			</div>
+			
 		)
 	}
 }
 
+
 export default App
+

@@ -22,7 +22,6 @@
     text-transform: uppercase;
     margin-bottom: 15px;
 }
-
 .btn-add-to-cart {
     text-transform: uppercase;
     font-size: 21px;
@@ -44,7 +43,6 @@
     text-align: center;
     margin: 10px 0;
 }
-
 .product-img {
     background-color: rgba(255,255,255,0.75);
     text-align: center;
@@ -52,28 +50,25 @@
     padding: 15px 0;
 }
 
+
 .product-quantity {
     text-align: center;
 }
-
 .product-quantity button {
     height: 30px;
     width: 30px;
     background-color: black;
     border: none;
-    color: white;
-    cursor: pointer
+    color:white;
+    cursor: pointer;
 }
-
 .product-quantity button:hover {
     background-color: grey;
 }
-
 .product-quantity input {
     height: 30px;
     text-align: center;
 }
-
-button:disabled {
-    background-color: #CCC;
+.product-quantity button:disabled  {
+    background-color: #ccc;
 }

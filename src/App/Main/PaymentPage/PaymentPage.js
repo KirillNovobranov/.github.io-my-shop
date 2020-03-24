@@ -1,11 +1,9 @@
 import React from 'react'
 
-
-const PaymentPage = ({
-}) => {
+const PaymentPage = () => {
     return (
         <div>
-            <h1 className="page-title">PaymentPage</h1>
+            <h1 className="page-title"> Payment Page</h1>
         </div>
     )
 }
