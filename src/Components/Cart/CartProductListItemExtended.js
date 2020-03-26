@@ -5,9 +5,7 @@ const CartProductListItemExtended = ({
     product,
     productCount,
     
-}) => (
-    
-       
+}) => (  
         <div className="cart-product-list-item-description">
             <div className="row">
                 <div className="col-lg-3">
@@ -27,11 +25,10 @@ const CartProductListItemExtended = ({
                     <p className="cart-extended-sum">
                          Sum for this item: <span className="bold sum-price">$ {(product.price * productCount)} </span> 
                     </p>
-                  
+                    <button>Delete product</button>
                 </div>
             </div>
-        </div>
-    
+        </div>    
 )
 
 

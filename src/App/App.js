@@ -24,6 +24,13 @@ class App extends Component {
 		}))
 	}
 
+	// removeProductFromCart = (productId) => {
+	// 	this.setState(()=>({
+	// 		productsInCart:{
+				
+	// 		}
+	// 	}))
+	// }
 	
 	render() {
 		return (
@@ -31,6 +38,7 @@ class App extends Component {
 				<Header 
 					productsInCart={this.state.productsInCart}
 				/>
+				{/* <button onClick={()=>this.removeProductFromCart(id)}>Delete product</button> */}
 				<Main 
 					addProductToCart={this.addProductToCart}
 					productsInCart={this.state.productsInCart}
