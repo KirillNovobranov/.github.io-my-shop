@@ -16,6 +16,7 @@ const CartProductList = ({
                         <CartItem
                             product = {productsObj[productId]}
                             productCount = {productsInCart[productId]}
+                            key = {productId}
                         />
                     )
                 })
