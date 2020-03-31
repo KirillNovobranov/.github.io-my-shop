@@ -1,11 +1,13 @@
 import React from 'react'
 import './Quantity.css'
 
+
 const Quantity = ({
     productCount,
     onDecrementClick,
     onIncrementClick,
 }) => {
+    
     return (
         <div className="product-quantity">
             <button 
