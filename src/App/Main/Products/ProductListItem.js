@@ -43,7 +43,11 @@ class ProductListItem extends Component {
                 <div className="product-description">{description}</div>
                 <div className="product-features">Type: {type}</div>
                 <div className="product-features">Capacity: {capacity} Gb</div>
-                <Quantity />
+                <Quantity 
+                    productCount={this.state.productCount}
+                    onIncrementClick={this.onIncrementClick}
+                    onDecrementClick={this.onDecrementClick}
+                />
                 <div className="product-price">{price}$</div>
                 <button 
                     className="btn-add-to-cart"

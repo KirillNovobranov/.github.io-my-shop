@@ -24,7 +24,11 @@ const CartProductListItemExtended = ({
                          
                     </p>
 
-                    <Quantity productCount={productCount}/>
+                    <Quantity 
+                        productCount={productCount}
+                        // onIncrementClick={onIncrementClick}
+                        // onDecrementClick={onDecrementClick}
+                        />
 
                     <p className="cart-extended-sum">
                          Sum for this item: <span className="bold sum-price">$ {(product.price * productCount)} </span> 
