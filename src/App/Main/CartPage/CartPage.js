@@ -7,6 +7,8 @@ import CartProductListItemExtended from '../../../Components/Cart/CartProductLis
 const CartPage = ({
     productsInCart,
     removeProductFromCart,
+    add,
+    remove,
 }) => {
     return (
         <div>
@@ -14,6 +16,8 @@ const CartPage = ({
                 productsInCart={productsInCart}
                 CartItem={CartProductListItemExtended}
                 removeProductFromCart={removeProductFromCart}
+                add={add}
+                remove={remove}
             />
             <CartTotal productsInCart={productsInCart}/>
         </div>
