@@ -31,20 +31,11 @@ class App extends Component {
 		}))
 	}
 
-	add = (productId) => {
+	changeProductQuantity = (productId, quantity) => {
 		this.setState((prevState) => ({
 			productsInCart:{
 				...prevState.productsInCart,
-				[productId]:prevState.productsInCart[productId] + 1
-			}
-		}))
-	}
-
-	remove = (productId) => {
-		this.setState((prevState) => ({
-			productsInCart:{
-				...prevState.productsInCart,
-				[productId]:prevState.productsInCart[productId] -1
+				[productId]:quantity
 			}
 		}))
 	}
@@ -56,11 +47,10 @@ class App extends Component {
 					productsInCart={this.state.productsInCart}
 				/>
 				<Main 
-					addProductToCart={this.addProductToCart}
+					addProductToCart={this.addProductToCart}					
 					productsInCart={this.state.productsInCart}
 					removeProductFromCart={this.removeProductFromCart}
-					add={this.add}
-					remove={this.remove}
+					changeProductQuantity={this.changeProductQuantity}					
 				/>
 				<Footer/>
 				

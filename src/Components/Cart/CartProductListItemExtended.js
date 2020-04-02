@@ -6,8 +6,7 @@ const CartProductListItemExtended = ({
     product,
     productCount,
     removeProductFromCart,
-    add,
-    remove,
+    changeProductQuantity,
 }) => (  
         <div className="cart-product-list-item-description">
             <div className="row">
@@ -28,8 +27,8 @@ const CartProductListItemExtended = ({
 
                     <Quantity 
                         productCount={productCount}
-                        onIncrementClick={() => add(product.id)}
-                        onDecrementClick={() => remove(product.id)}    
+                        onIncrementClick={() => changeProductQuantity(product.id, productCount + 1)}
+                        onDecrementClick={() => changeProductQuantity(product.id, productCount - 1)}    
                     />                     
 
                     <p className="cart-extended-sum">
