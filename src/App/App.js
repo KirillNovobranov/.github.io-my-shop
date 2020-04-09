@@ -12,9 +12,33 @@ class App extends Component {
 
 	state = {
 		productsInCart:{
-			
+			1:5,
+			2:5,
+		},
+		likeButtonsState: {
+			1:true,
+			2:false,
 		}
+	}	
+
+	addLike = (productId) => {
+		this.setState((prevState) => ({
+			likeButtonsState:{
+				...prevState.likeButtonsState,
+				[productId]: true,
+			}
+		}))
 	}
+
+	removeLike = (productId) => {
+		this.setState((prevState) => ({
+			likeButtonsState:{
+				...prevState.likeButtonsState,
+				[productId]: false,
+			}
+		}))
+	}
+
 
 	addProductToCart = (count,productId) => {
 		this.setState((prevState)=>({
@@ -50,7 +74,10 @@ class App extends Component {
 					addProductToCart={this.addProductToCart}					
 					productsInCart={this.state.productsInCart}
 					removeProductFromCart={this.removeProductFromCart}
-					changeProductQuantity={this.changeProductQuantity}					
+					changeProductQuantity={this.changeProductQuantity}		
+					likeButtonsState={this.state.likeButtonsState}	
+					addLike={this.addLike}
+					removeLike={this.removeLike}		
 				/>
 				<Footer/>
 				

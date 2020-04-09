@@ -3,7 +3,10 @@ import ProductListItem from './ProductListItem'
 import productsData from './productsData'
 
 const ProductsList = ({
-    addProductToCart
+    addProductToCart,
+    likeButtonsState,
+    addLike,
+    removeLike,
 }) => {
     return (
         <div>
@@ -29,6 +32,9 @@ const ProductsList = ({
                                 image={image}
                                 addProductToCart={addProductToCart}
                                 id={id}
+                                isLiked={likeButtonsState[id]}
+                                addLike={addLike}
+                                removeLike={removeLike}
                             />
                        </div>
                    ))
