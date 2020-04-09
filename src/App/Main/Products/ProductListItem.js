@@ -31,7 +31,6 @@ class ProductListItem extends Component {
        } = this.props;
         
        isLiked ? removeLike(id) : addLike(id)
-
     }
     
     render() {
