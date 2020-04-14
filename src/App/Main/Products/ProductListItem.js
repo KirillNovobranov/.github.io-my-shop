@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import PropTypes from 'prop-types'
 import './ProductListItem.css'
+import {connect} from 'react-redux'
 import Quantity from '../../../Components/Quantity/Quantity'
 
 
@@ -8,6 +9,16 @@ class ProductListItem extends Component {
 
     state = {
         productCount:1,
+    }
+
+    changeLikeState = () => {
+        const {
+            id,
+            isLiked,
+            addLike,
+            removeLike,
+        } = this.props;
+        isLiked ?  removeLike(id) : addLike(id)
     }
 
     onIncrementClick = () => {
@@ -20,17 +31,6 @@ class ProductListItem extends Component {
         this.setState((prevState)=>({
             productCount:prevState.productCount - 1
         }))
-    }
-
-    changeLikeState () {
-       const {
-           isLiked,
-           removeLike,
-           addLike,
-           id,
-       } = this.props;
-        
-       isLiked ? removeLike(id) : addLike(id)
     }
     
     render() {
@@ -51,7 +51,7 @@ class ProductListItem extends Component {
                 <div className="product-img">
                     <img src={image} alt={description} title={name}/>
                 </div>
-                <button onClick={()=>this.changeLikeState()}>
+                <button onClick={()=>this.changeLikeState()} >
                     {isLiked  ? <span>&#9829;</span> : <span>&#9825;</span> }
                 </button>
                 <div className="product-title">{name}</div>
@@ -88,4 +88,23 @@ ProductListItem.defaultProps = {
     description:"No description"
 }
 
-export default ProductListItem
+const mapStateToProps = (state, props) => ({
+    isLiked:state[props.id],
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    addLike:(id) => dispatch ({
+        type:"LIKE",
+        id:id,
+    }),
+    removeLike:(id) => dispatch ({
+        type:"DISLIKE",
+        id:id,
+    })    
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+
+) (ProductListItem)
