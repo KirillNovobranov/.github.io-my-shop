@@ -1,15 +1,12 @@
 import React from 'react'
 import './CartProductListItemExtended.css'
-import {connect} from 'react-redux'
 import Quantity from '../Quantity/Quantity'
-import ProductListItem from '../../App/Main/Products/ProductListItem'
 
 const CartProductListItemExtended = ({
     product,
     productCount,
     removeProductFromCart,
     changeProductQuantity,
-    isLiked=false,
 }) => (  
         <div className="cart-product-list-item-description">
             <div className="row">
@@ -27,9 +24,7 @@ const CartProductListItemExtended = ({
                          Selected quantity: <span className="bold"> {productCount} </span> 
                          
                     </p>
-                    <button>
-                        {isLiked ? <span>&#9829;</span> : <span>&#9825;</span> }
-                    </button>
+
                     <Quantity 
                         productCount={productCount} 
                         onDecrementClick={() => (
@@ -52,10 +47,5 @@ const CartProductListItemExtended = ({
         </div>    
 )
 
-const mapStateToProps = (state, props) => ({
-    isLiked:state[props.product.id]
-})
 
-export default connect (
-    mapStateToProps
-) (CartProductListItemExtended)
+export default CartProductListItemExtended
